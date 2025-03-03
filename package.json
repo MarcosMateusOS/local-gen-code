@@ -1,0 +1,27 @@
+{
+  "name": "local-code-gen",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.0",
+    "@types/yargs": "^17.0.33"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ollama": "^0.5.14",
+    "yargs": "^17.7.2"
+  },
+  "scripts": {
+    "start": "bun run index.ts",
+    "ai": "bun run ./src/code-gen/ai.ts",
+    "server": "bun run ./src/api/server.ts"
+  },
+  "bin": {
+    "local-code-gen": "./index.ts"
+  }
+}
